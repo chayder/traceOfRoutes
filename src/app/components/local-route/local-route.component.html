@@ -1,0 +1,67 @@
+<div style="align-content: center">
+  <div>
+    <table style="align-content: center">
+        <tr>
+          <td>
+            Sistema Operativo:
+          </td>
+          <td>
+            Método de Entrada:
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <select [(value)]="tipoSistOperativo" [(ngModel)] = 'tipoSistOperativo'>
+              <option *ngFor="let sistema of sistemasOP" value="{{sistema}}">{{ sistema }}</option>
+            </select>
+          </td>          
+          <td>
+            <select [(value)]="tipoEntrada" [(ngModel)] = 'tipoEntrada'>
+              <option *ngFor="let tipo of entradas" value="{{tipo}}">{{ tipo }}</option>
+            </select> 
+          </td>
+        </tr>
+    </table>
+  </div>
+  
+  <div *ngIf="tipoEntrada === 'Texto' && tipoSistOperativo !== undefined">
+    Ingrese el texto del comando en la caja de texto que aparece a continuación: <br>
+    <textarea style="width: 800px; height: 100px" placeholder="Ingrese el texto de salida desde la terminal" [(ngModel)]="texto_base"></textarea><br>
+    <button type="button" (click)="preprocesarTexto()">Calcular Traza</button><br>
+    <br>
+  </div>
+
+  <div *ngIf="tipoEntrada === 'Archivo' && tipoSistOperativo !== undefined">
+    <input type='file' placeholder="Seleccionar Archivo" name='userFile' id='file' (change)="archivoCargado($event.target)"><br>
+  </div>
+  <div *ngIf="textoCargado">
+    <table>
+      <thead>
+        <tr>
+          <th># Salto</th>
+          <th>IP</th>
+          <th>Organizacion</th>
+          <th>Nombre red</th>
+          <th>ISP</th>
+          <th>Ciudad</th>
+          <th>Pais</th>
+          <th>Continente</th>
+          <th>Tiempo</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of trazaProcesada" style="align-content: center">
+          <td> {{ item['nSalto'] }} </td>
+          <td> {{ item['ip'] }} </td>
+          <td> {{ item['organizacion'] }} </td>
+          <td> {{ item['nombre'] }} </td>
+          <td> {{ item['isp'] }} </td>
+          <td> {{ item['ciudad'] }} </td>
+          <td> {{ item['pais'] }} </td>
+          <td> {{ item['continente'] }} </td>       
+          <td> {{ item['ms'] }} ms</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
