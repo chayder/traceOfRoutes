@@ -1,0 +1,36 @@
+
+Traza a la direcci¢n microsoft.com [40.113.200.201]
+sobre un m ximo de 30 saltos:
+
+  1    <1 ms    <1 ms    <1 ms  192.168.0.1 
+  2    21 ms    11 ms     9 ms  5.232.64.1 
+  3    33 ms    12 ms     9 ms  172.21.16.190 
+  4    44 ms    39 ms    37 ms  10.14.18.25 
+  5    74 ms    60 ms    49 ms  mai-b1-link.telia.net [213.248.70.68] 
+  6    78 ms    76 ms    76 ms  microsoft-ic-323369-mai-b1.c.telia.net [62.115.154.85] 
+  7   121 ms   111 ms   110 ms  be-40-0.ibr02.sn4.ntwk.msn.net [104.44.5.14] 
+  8   112 ms   119 ms   114 ms  be-3-0.ibr02.dfw05.ntwk.msn.net [104.44.4.89] 
+  9    98 ms   103 ms   102 ms  be-1-0.ibr01.dfw05.ntwk.msn.net [104.44.4.6] 
+ 10   101 ms   111 ms    99 ms  be-5-0.ibr02.dsm05.ntwk.msn.net [104.44.19.57] 
+ 11   103 ms   101 ms   114 ms  ae161-0.icr03.dsm05.ntwk.msn.net [104.44.22.190] 
+ 12     *        *        *     Tiempo de espera agotado para esta solicitud.
+ 13     *        *        *     Tiempo de espera agotado para esta solicitud.
+ 14     *        *        *     Tiempo de espera agotado para esta solicitud.
+ 15     *        *        *     Tiempo de espera agotado para esta solicitud.
+ 16     *        *        *     Tiempo de espera agotado para esta solicitud.
+ 17     *        *        *     Tiempo de espera agotado para esta solicitud.
+ 18     *        *        *     Tiempo de espera agotado para esta solicitud.
+ 19     *        *        *     Tiempo de espera agotado para esta solicitud.
+ 20     *        *        *     Tiempo de espera agotado para esta solicitud.
+ 21     *        *        *     Tiempo de espera agotado para esta solicitud.
+ 22     *        *        *     Tiempo de espera agotado para esta solicitud.
+ 23     *        *        *     Tiempo de espera agotado para esta solicitud.
+ 24     *        *        *     Tiempo de espera agotado para esta solicitud.
+ 25     *        *        *     Tiempo de espera agotado para esta solicitud.
+ 26     *        *        *     Tiempo de espera agotado para esta solicitud.
+ 27     *        *        *     Tiempo de espera agotado para esta solicitud.
+ 28     *        *        *     Tiempo de espera agotado para esta solicitud.
+ 29     *        *        *     Tiempo de espera agotado para esta solicitud.
+ 30     *        *        *     Tiempo de espera agotado para esta solicitud.
+
+Traza completa.

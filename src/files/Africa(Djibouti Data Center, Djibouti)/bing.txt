@@ -1,0 +1,10 @@
+Tracing the route to IP node (13.107.21.200) from 1 to 30 hops
+
+  1    79 ms   78 ms   82 ms 184.105.81.141 
+  2   125 ms  125 ms  125 ms 184.104.192.86 
+  3   133 ms  133 ms  133 ms 184.105.222.61 
+  4   133 ms  133 ms  133 ms 196.60.9.133 
+  5    *       *       *     * 
+  6    *       *       *     * 
+  7   133 ms  133 ms  133 ms 13.107.21.200 
+# Entry cached for another 59 seconds.

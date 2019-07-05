@@ -14,9 +14,13 @@ export class LocalRouteComponent implements OnInit {
   tipoSistOperativo: string;
   textoCargado: boolean;
   texto_base: any = '';
-  preproceso = [];
+  preproceso = []; 
   trazaProcesada = [];
+  trazaFinal = [];
   error: any;
+  mapa: any;
+  lat: number = 51.678418;
+  lng: number = 7.809007;
 
 
   constructor(
@@ -36,7 +40,7 @@ export class LocalRouteComponent implements OnInit {
     reader.readAsText(file);
     reader.onload = error => {
       this.texto_base = reader.result;
-      console.log(this.texto_base);
+      //console.log(this.texto_base);
       this.preprocesarTexto();
     }
   }
@@ -63,84 +67,128 @@ export class LocalRouteComponent implements OnInit {
     for (let i = 1; i < this.preproceso.length; i++) {
       // console.log(this.separacion[i].length);
       if ( this.preproceso[i].length > 7 ) {
-        this.trazaProcesada.push({
+        var tmp = {
           nSalto: this.preproceso[i][1],
           nombre: this.preproceso[i][3],
           ip: this.preproceso[i][4].substring(1, this.preproceso[i][4].length - 1),
           ms: this.preproceso[i][6],
-        });
+        };
+
+        this.trazaProcesada[i] = tmp;
       }
     }
+    console.log(this.trazaProcesada);
+    this.trazaProcesada = this.trazaProcesada.filter(data => data !== undefined);
+    console.log(this.trazaProcesada);
     this.obtenerGeo();
   }
 
   exportarWindows(){
-    for (let indice = 0; indice < this.preproceso.length; indice++) {
+    for (let i = 0; i < this.preproceso.length; i++) {
       let NumSalto;
-      if (this.preproceso[indice].length > 12) {
-        if (this.preproceso[indice][2] !== '') {
-          NumSalto = this.preproceso[indice][2];
+      if (this.preproceso[i].length > 12) {
+        if (this.preproceso[i][2] !== '') {
+          NumSalto = this.preproceso[i][2];
         } else {
-          NumSalto = this.preproceso[indice][1];
+          NumSalto = this.preproceso[i][1];
         }
-        // console.log(this.preproceso[indice]);
-        if ( this.preproceso[indice][ this.preproceso[ indice ].length - 3 ] !== '' ) {
-            // console.log(`el nombre del punto es ${this.preproceso[indice][ this.preproceso[ indice ].length - 3 ]}`);
-            if ( this.preproceso[indice][ this.preproceso[ indice ].length - 2 ].length > 6 ) {
-              this.trazaProcesada.push({
-                salto: NumSalto,
-                nombre: this.preproceso[indice][ this.preproceso[ indice ].length - 3 ],
-                // ip: this.preproceso[indice][4].substring(1, this.separacion[indice][4].length - 1),
-                ip: this.preproceso[indice][ this.preproceso[ indice ].length - 2 ]
-                .substring(1, this.preproceso[indice][ this.preproceso[ indice ].length - 2 ].length - 1),
-                ms: this.preproceso[indice][ this.preproceso[ indice ].length - 6 ],
-              });
+        // console.log(this.preproceso[i]);
+        if ( this.preproceso[i][ this.preproceso[ i ].length - 3 ] !== '' ) {
+            if ( this.preproceso[i][ this.preproceso[ i ].length - 2 ].length > 6 ) {
+              var tmp = {
+                nsalto: NumSalto,
+                nombre: this.preproceso[i][ this.preproceso[ i ].length - 3 ],
+                ip: this.preproceso[i][ this.preproceso[ i ].length - 2 ]
+                .substring(1, this.preproceso[i][ this.preproceso[i].length - 2 ].length - 1),
+                ms: this.preproceso[i][ this.preproceso[ i ].length - 6 ],
+              };
+              this.trazaProcesada[i] = tmp;
             }
         } else {
-          // console.log(`no hay nombre solo direccion: ${this.preproceso[indice][ this.preproceso[ indice ].length - 2 ]}`);
-          if (this.preproceso[indice][ this.preproceso[ indice ].length - 2 ].length > 6 ) {
-            this.trazaProcesada.push({
-              salto: NumSalto,
-              nombre: '',
-              // ip: this.preproceso[indice][4].substring(1, this.preproceso[indice][4].length - 1),
-              ip: this.preproceso[indice][ this.preproceso[ indice ].length - 2 ],
-              ms: this.preproceso[indice][ this.preproceso[ indice ].length - 5 ],
-            });
+          // console.log(`no hay nombre solo direccion`);
+          if (this.preproceso[i][ this.preproceso[ i ].length - 2 ].length > 6 ) {
+            var tmpnombre: any;
+            var tmp = {
+              nsalto: NumSalto,
+              nombre: tmpnombre,
+              ip: this.preproceso[i][ this.preproceso[ i ].length - 2 ],
+              ms: this.preproceso[i][ this.preproceso[ i ].length - 5 ],
+            };
+            this.trazaProcesada[i] = tmp;
           }
         }
       }
     }
-    //console.log("trazaWindows");
+    console.log("trazaWindows");
+    this.trazaProcesada = this.trazaProcesada.filter(data => data !== undefined);
+    console.log(this.trazaProcesada);
     this.obtenerGeo();
   }
 
   obtenerGeo() {
-
-    for (let i = 0; i < this.trazaProcesada.length; i++) {
+    for (let i = 1; i < this.trazaProcesada.length; i++) {
       this.geoip.get(this.trazaProcesada[i]['ip']).subscribe( dato => {
         //console.log(dato);
-        this.trazaProcesada[i]['isp'] = dato['isp'];
+
+        var tmp = {
+          nSalto: this.trazaProcesada[i]['nSalto'],
+          nombre: this.trazaProcesada[i]['nombre'],
+          ip: this.trazaProcesada[i]['ip'],
+          ms: this.trazaProcesada[i]['ms'],
+          isp: dato['isp'],
+          organizacion: dato['organization'],
+          continente: dato['continent_name'],
+          pais: dato['country_name'],
+          ciudad: dato['city'],
+          latitud: Number(dato['latitude']),
+          longitud: Number(dato['longitude'])
+        };
+        this.guardarTrazaFinal(tmp);
+        console.log("Salida GuardarTraza");
+
+        this.trazaProcesada[i]['organizacion'] = dato['isp'];
         this.trazaProcesada[i]['organizacion'] = dato['organization'];
         this.trazaProcesada[i]['continente'] = dato['continent_name'];
         this.trazaProcesada[i]['pais'] = dato['country_name'];
         this.trazaProcesada[i]['ciudad'] = dato['city'];
-        if (i === ( this.trazaProcesada.length - 1 ) ) {
-          //console.log(this.trazaProcesada);
-          //this.crearPuntos();
-        }
+        this.trazaProcesada[i]['latitud'] = dato['latitude'];
+        this.trazaProcesada[i]['longitud'] = dato['longitude'];
     }, (error_service) => {
       // console.log(error_service);
-      this.error = error_service;
-      // console.log(`la ip ${this.JsonTraza[i]['ip']} es privada`);
+
+      // var tmp = {
+      //   nSalto: this.trazaProcesada[i]['nSalto'],
+      //   nombre: this.trazaProcesada[i]['nombre'],
+      //   ip: this.trazaProcesada[i]['ip'],
+      //   ms: this.trazaProcesada[i]['ms'],
+      //   isp: "***",
+      //   organizacion: "***",
+      //   continente: "***",
+      //   pais: "***",
+      //   ciudad: "***",
+      //   latitud: "***",
+      //   longitud: "***"
+      // };
+      //this.guardarTrazaFinal(tmp);
+
+      // this.error = error_service;
       this.trazaProcesada[i]['isp'] = '***';
-        this.trazaProcesada[i]['organizacion'] = '***';
-        this.trazaProcesada[i]['continente'] = '***';
-        this.trazaProcesada[i]['pais'] = '***';
-        this.trazaProcesada[i]['ciudad'] = '***';
+      this.trazaProcesada[i]['organizacion'] = '***';
+      this.trazaProcesada[i]['continente'] = '***';
+      this.trazaProcesada[i]['pais'] = '***';
+      this.trazaProcesada[i]['ciudad'] = '***';
+      this.trazaProcesada[i]['latitud'] = '***';
+      this.trazaProcesada[i]['longitud'] = '***';
     });
     }
     this.textoCargado = true;
-    console.log(this.trazaProcesada)
-    // console.log(this.markers);
+    // console.log(this.lat + ", " + this.lng)
+  }
+
+  guardarTrazaFinal(tmp){
+    console.log(typeof tmp.latitud);
+    if(tmp.isp !== "***"){
+      this.trazaFinal.push(tmp);
+    }
   }
 }

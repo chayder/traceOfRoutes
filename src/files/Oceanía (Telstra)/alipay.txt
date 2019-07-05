@@ -1,0 +1,11 @@
+ 1  gigabitethernet3-3.exi1.melbourne.telstra.net (203.50.77.49)  0.290 ms  0.263 ms  0.242 ms
+ 2  bundle-ether3-100.exi-core10.melbourne.telstra.net (203.50.80.1)  2.366 ms  1.667 ms  1.991 ms
+ 3  bundle-ether12.chw-core10.sydney.telstra.net (203.50.11.124)  15.111 ms  14.163 ms  14.980 ms
+ 4  bundle-ether1.oxf-gw11.sydney.telstra.net (203.50.6.93)  14.484 ms  14.661 ms  14.984 ms
+ 5  bundle-ether1.sydo-core03.sydney.reach.com (203.50.13.98)  13.611 ms  14.285 ms  14.984 ms
+ 6  i-73.paix-core02.telstraglobal.net (202.84.247.45)  203.876 ms  205.422 ms  204.875 ms
+ 7  i-0-7-0-1.eqnx-core02.telstraglobal.net (202.84.143.209)  202.245 ms  200.677 ms  200.878 ms
+ 8  i-15208.hkth-core02.telstraglobal.net (202.84.140.1)  225.981 ms  225.654 ms  225.123 ms
+ 9  i-92.hkth12.telstraglobal.net (202.84.153.38)  223.845 ms
+10  203.215.232.81 (203.215.232.81)  319.358 ms
+11  202.97.25.225 (202.97.25.225)  338.666 ms  332.477 ms  335.922 ms

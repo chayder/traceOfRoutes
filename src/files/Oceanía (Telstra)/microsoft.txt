@@ -1,0 +1,14 @@
+ 1  gigabitethernet3-3.exi2.melbourne.telstra.net (203.50.77.53)  0.327 ms  0.204 ms  0.243 ms
+ 2  bundle-ether3-100.win-core10.melbourne.telstra.net (203.50.80.129)  2.864 ms  1.478 ms  2.116 ms
+ 3  bundle-ether1.win-edge903.melbourne.telstra.net (203.50.11.195)  0.493 ms  0.855 ms  0.493 ms
+ 4  mic2803104.lnk.telstra.net (110.145.195.118)  1.116 ms  0.853 ms  0.742 ms
+ 5  ae31-0.icr02.mel01.ntwk.msn.net (104.44.236.135)  1.117 ms  1.227 ms  1.117 ms
+ 6  be-122-0.ibr02.mel01.ntwk.msn.net (104.44.11.169)  207.500 ms  207.110 ms  207.247 ms
+ 7  be-5-0.ibr02.syd03.ntwk.msn.net (104.44.16.100)  207.623 ms  207.108 ms  207.496 ms
+ 8  be-7-0.ibr02.lax03.ntwk.msn.net (104.44.17.178)  206.748 ms  206.608 ms  207.623 ms
+ 9  be-3-0.ibr01.sn4.ntwk.msn.net (104.44.4.5)  207.122 ms  206.736 ms  206.382 ms
+10  be-1-0.ibr02.sn4.ntwk.msn.net (104.44.4.204)  207.601 ms  207.354 ms  208.121 ms
+11  be-3-0.ibr02.dfw05.ntwk.msn.net (104.44.4.89)  208.495 ms  207.855 ms  205.749 ms
+12  be-1-0.ibr01.dfw05.ntwk.msn.net (104.44.4.6)  207.622 ms  208.858 ms  207.248 ms
+13  be-5-0.ibr02.dsm05.ntwk.msn.net (104.44.19.57)  207.496 ms  207.984 ms
+14  ae141-0.icr03.dsm05.ntwk.msn.net (104.44.22.182)  207.107 ms

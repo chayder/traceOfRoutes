@@ -1,0 +1,32 @@
+traceroute to 40.76.4.15 (40.76.4.15), 30 hops max, 40 byte packets
+ 1  core-87-router (128.112.128.2)  113.764 ms  8.766 ms  0.670 ms
+ 2  rtr-border-hpcrc-router.princeton.edu (128.112.12.110)  8.497 ms  4.888 ms rtr-border-87-router.princeton.edu (128.112.12.78)  1.384 ms
+ 3  local1.princeton.magpi.net (216.27.98.113)  2.529 ms  2.540 ms rtr-border-hpcrc-router.princeton.edu (204.153.48.54)  1.906 ms
+ 4  local1.princeton.magpi.net (216.27.98.113)  2.590 ms  2.600 ms  2.604 ms
+ 5  et-1-1-0.4079.rtsw.wash.net.internet2.edu (162.252.70.119)  6.045 ms  5.986 ms 216.27.100.18 (216.27.100.18)  2.722 ms
+ 6  et-1-1-0.4079.rtsw.wash.net.internet2.edu (162.252.70.119)  6.347 ms ae-0.4079.rtsw2.ashb.net.internet2.edu (162.252.70.137)  6.517 ms  6.277 ms
+ 7  ae-0.4079.rtsw2.ashb.net.internet2.edu (162.252.70.137)  6.599 ms  6.780 ms ae11-0.ash-96cbe-1b.ntwk.msn.net (198.200.130.74)  7.489 ms
+ 8  ae72-0.icr02.bl7.ntwk.msn.net (104.44.233.21)  7.980 ms ae11-0.ash-96cbe-1b.ntwk.msn.net (198.200.130.74)  29.353 ms  6.976 ms
+ 9  be-142-0.ibr03.bl7.ntwk.msn.net (104.44.21.209)  8.314 ms be-162-0.ibr04.bl7.ntwk.msn.net (104.44.21.217)  8.167 ms be-162-0.ibr04.bl20.ntwk.msn.net (104.44.21.235)  8.213 ms
+10  ae160-0.icr01.bl7.ntwk.msn.net (104.44.21.214)  7.821 ms * be-142-0.ibr03.bl20.ntwk.msn.net (104.44.21.225)  7.963 ms
+11  * * ae160-0.icr01.bl7.ntwk.msn.net (104.44.21.214)  7.577 ms
+12  * * *
+13  * * *
+14  * * *
+15  * * *
+16  * * *
+17  * * *
+18  * * *
+19  * * *
+20  * * *
+21  * * *
+22  * * *
+23  * * *
+24  * * *
+25  * * *
+26  * * *
+27  * * *
+28  * * *
+29  * * *
+30  * * *
+Done.

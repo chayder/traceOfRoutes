@@ -1,0 +1,4 @@
+ 1  gigabitethernet3-3.exi2.melbourne.telstra.net (203.50.77.53)  0.275 ms  0.330 ms  0.241 ms
+ 2  bundle-ether3-100.win-core10.melbourne.telstra.net (203.50.80.129)  2.738 ms  1.477 ms  1.990 ms
+ 3  bundle-ether1.win-edge903.melbourne.telstra.net (203.50.11.195)  0.742 ms  0.479 ms  0.493 ms
+ 4  mic2803104.lnk.telstra.net (110.145.195.118)  0.740 ms  0.729 ms  0.745 ms

@@ -1,0 +1,36 @@
+
+Traza a la direcci¢n alipay.com [110.75.129.5]
+sobre un m ximo de 30 saltos:
+
+  1    <1 ms    <1 ms    <1 ms  192.168.0.1 
+  2    10 ms    12 ms    21 ms  5.232.64.1 
+  3    28 ms    27 ms    12 ms  172.21.16.190 
+  4    27 ms    25 ms    45 ms  10.14.18.25 
+  5    62 ms    54 ms    73 ms  mai-b1-link.telia.net [213.248.70.68] 
+  6   125 ms   143 ms   124 ms  chinatelecom-ic-336648-mai-b1.c.telia.net [80.239.134.241] 
+  7   114 ms   119 ms   127 ms  202.97.86.81 
+  8   276 ms   279 ms   277 ms  202.97.51.53 
+  9   279 ms   275 ms   275 ms  202.97.33.125 
+ 10   261 ms   271 ms   263 ms  202.97.61.85 
+ 11   283 ms   282 ms   302 ms  202.97.55.6 
+ 12   277 ms   277 ms   276 ms  220.191.200.138 
+ 13   301 ms   288 ms   282 ms  115.236.101.213 
+ 14     *        *        *     Tiempo de espera agotado para esta solicitud.
+ 15   274 ms   267 ms   308 ms  123.56.34.242 
+ 16     *        *        *     Tiempo de espera agotado para esta solicitud.
+ 17     *        *        *     Tiempo de espera agotado para esta solicitud.
+ 18     *        *        *     Tiempo de espera agotado para esta solicitud.
+ 19     *        *        *     Tiempo de espera agotado para esta solicitud.
+ 20     *        *        *     Tiempo de espera agotado para esta solicitud.
+ 21     *        *        *     Tiempo de espera agotado para esta solicitud.
+ 22     *        *        *     Tiempo de espera agotado para esta solicitud.
+ 23     *        *        *     Tiempo de espera agotado para esta solicitud.
+ 24     *        *        *     Tiempo de espera agotado para esta solicitud.
+ 25     *        *        *     Tiempo de espera agotado para esta solicitud.
+ 26     *        *        *     Tiempo de espera agotado para esta solicitud.
+ 27     *        *        *     Tiempo de espera agotado para esta solicitud.
+ 28     *        *        *     Tiempo de espera agotado para esta solicitud.
+ 29     *        *        *     Tiempo de espera agotado para esta solicitud.
+ 30     *        *        *     Tiempo de espera agotado para esta solicitud.
+
+Traza completa.

@@ -1,0 +1,13 @@
+Tracing the route to IP node (192.30.255.113) from 1 to 30 hops
+
+  1    62 ms   61 ms   78 ms 184.105.222.81 
+  2    73 ms   78 ms   72 ms 184.105.222.21 
+  3   143 ms  143 ms  143 ms 184.105.81.77 
+  4   164 ms  164 ms  164 ms 184.104.193.38 
+  5   171 ms  180 ms  170 ms 184.105.223.178 
+  6   205 ms  213 ms  205 ms 184.105.223.193 
+  7   201 ms  201 ms  201 ms 206.81.81.89 
+  8    *       *       *     ? 
+  9    *       *       *     ? 
+ 10   204 ms  202 ms  202 ms 192.30.255.113 
+# Entry cached for another 60 seconds.

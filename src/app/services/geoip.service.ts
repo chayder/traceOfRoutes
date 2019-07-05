@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient} from '@angular/common/http';
 
-const api_key = 'ccff6b1b00ae48df96cbce207dbd7cbd';
+const api_key = 'dd37c211a3794fcf802d4daba1171925';
 const url = `https://api.ipgeolocation.io/ipgeo?apiKey=${api_key}&ip=`;
 
 @Injectable({

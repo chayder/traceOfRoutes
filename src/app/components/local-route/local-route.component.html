@@ -47,6 +47,8 @@
           <th>Pais</th>
           <th>Continente</th>
           <th>Tiempo</th>
+          <th>latitud</th>
+          <th>longitud</th>
         </tr>
       </thead>
       <tbody>
@@ -60,8 +62,40 @@
           <td> {{ item['pais'] }} </td>
           <td> {{ item['continente'] }} </td>       
           <td> {{ item['ms'] }} ms</td>
+          <td> {{ item['latitud'] }} </td>
+          <td> {{ item['longitud'] }} </td>
         </tr>
       </tbody>
     </table>
+
+    <div>
+      <table>
+        <thead>
+          <tr>
+            <th>latitud</th>
+            <th>longitud</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of trazaFinal" style="align-content: center">
+            <td> {{ item['latitud'] }} </td>
+            <td> {{ item['longitud'] }} </td>
+          </tr>
+        </tbody>
+      </table>
+      <br><br>
+      <!-- ( {{ trazaFinal[0]['latitud'] }}, {{ trazaFinal[0]['longitud'] }} ) -->
+      <agm-map [latitude]="lat" [longitude]="lng" style="height: 300px;">
+        <agm-marker *ngFor="let item of trazaFinal" 
+            [latitude]="item['latitud']" 
+            [longitude]="item['longitud']" 
+            [label]="{text: item['nSalto']+': \n'+item['ip']+' --\n '+item['nombre'], fontSize: '12px'}"></agm-marker>
+        <agm-polyline [editable]="true">
+          <agm-polyline-point *ngFor="let item of trazaFinal" [latitude]="item['latitud']" [longitude]="item['longitud']">
+
+          </agm-polyline-point>
+        </agm-polyline>
+      </agm-map>
+    </div>
   </div>
 </div>

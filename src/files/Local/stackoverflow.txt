@@ -1,0 +1,13 @@
+
+Traza a la direcci¢n stackoverflow.com [151.101.65.69]
+sobre un m ximo de 30 saltos:
+
+  1    <1 ms    <1 ms    <1 ms  192.168.0.1 
+  2    22 ms    12 ms    30 ms  5.232.64.1 
+  3    22 ms    12 ms    14 ms  172.21.16.190 
+  4    24 ms    25 ms    37 ms  10.14.18.25 
+  5    58 ms    61 ms    50 ms  mai-b1-link.telia.net [213.248.70.68] 
+  6    49 ms    65 ms    67 ms  fastly-ic-340356-mai-b1.c.telia.net [62.115.166.187] 
+  7    85 ms    79 ms    69 ms  151.101.65.69 
+
+Traza completa.

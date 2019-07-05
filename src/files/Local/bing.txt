@@ -1,0 +1,21 @@
+
+Traza a la direcci¢n bing.com [13.107.21.200]
+sobre un m ximo de 30 saltos:
+
+  1    <1 ms    <1 ms    <1 ms  192.168.0.1 
+  2    33 ms    12 ms    12 ms  5.232.64.1 
+  3    14 ms    11 ms    12 ms  172.21.16.190 
+  4    40 ms    25 ms    38 ms  10.14.18.29 
+  5    30 ms    31 ms    31 ms  10.14.18.30 
+  6     *        *        *     Tiempo de espera agotado para esta solicitud.
+  7    27 ms    26 ms    28 ms  181.49.125.21 
+  8    46 ms    36 ms    26 ms  10.14.18.25 
+  9    64 ms    53 ms    54 ms  mai-b1-link.telia.net [213.248.70.68] 
+ 10    83 ms    79 ms    80 ms  microsoft-ic-323369-mai-b1.c.telia.net [62.115.154.85] 
+ 11     *        *        *     Tiempo de espera agotado para esta solicitud.
+ 12     *        *        *     Tiempo de espera agotado para esta solicitud.
+ 13     *        *        *     Tiempo de espera agotado para esta solicitud.
+ 14     *        *        *     Tiempo de espera agotado para esta solicitud.
+ 15   100 ms    82 ms    76 ms  13.107.21.200 
+
+Traza completa.
